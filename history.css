@@ -1,0 +1,243 @@
+/* HISTORY HERO */
+
+.history-hero {
+  min-height: 65vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(rgba(7, 27, 46, 0.78), rgba(7, 27, 46, 0.88)),
+    url("assets/church.jpg") center / cover no-repeat;
+}
+
+.history-hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 80px;
+  color: white;
+}
+
+.history-hero-content h1 {
+  font-size: clamp(55px, 8vw, 100px);
+  line-height: 0.9;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.history-hero-content p:last-child {
+  max-width: 600px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 17px;
+}
+
+/* LANGUAGE SECTION */
+
+.language-section {
+  background: var(--cream);
+  padding: 55px 0;
+}
+
+.language-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.language-container h2 {
+  color: var(--navy);
+  font-size: clamp(35px, 4vw, 55px);
+  line-height: 1;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.language-switcher > span {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--muted);
+  margin-right: 8px;
+}
+
+.language-btn {
+  padding: 12px 20px;
+  background: transparent;
+  border: 1px solid #d5cbb9;
+  color: var(--navy);
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.language-btn.active,
+.language-btn:hover {
+  background: var(--navy);
+  color: var(--gold-light);
+  border-color: var(--navy);
+}
+
+/* HISTORY CONTENT */
+
+.history-content {
+  background: white;
+}
+
+.history-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.history-image {
+  height: 520px;
+  overflow: hidden;
+}
+
+.history-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.history-text h2 {
+  font-size: clamp(40px, 4vw, 60px);
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+.history-text p {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* TIMELINE */
+
+.milestones-section {
+  background: var(--cream);
+  padding: 110px 0;
+}
+
+.timeline {
+  max-width: 900px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 35px;
+  padding: 35px 0;
+  border-bottom: 1px solid #e1dcd2;
+}
+
+.timeline-number {
+  font-size: 14px;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.timeline-item h3 {
+  color: var(--navy);
+  font-size: 34px;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.timeline-item p {
+  color: var(--muted);
+  max-width: 650px;
+}
+
+/* VERSE */
+
+.history-verse {
+  background: var(--gold);
+  padding: 90px 0;
+  text-align: center;
+  color: var(--navy);
+}
+
+.history-verse blockquote {
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.2;
+  max-width: 850px;
+  margin: 20px auto;
+}
+
+.history-verse span {
+  font-weight: 600;
+}
+
+/* MALAYALAM FONT */
+
+html[lang="ml"] body {
+  font-family: "Noto Sans Malayalam", "Inter", sans-serif;
+}
+
+html[lang="ml"] h1,
+html[lang="ml"] h2,
+html[lang="ml"] h3,
+html[lang="ml"] blockquote {
+  font-family: "Noto Sans Malayalam", sans-serif;
+}
+
+/* ACTIVE NAV LINK */
+
+.active-link {
+  color: var(--gold) !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .language-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .history-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .history-image {
+    height: 350px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 50px 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .history-hero {
+    min-height: 70vh;
+  }
+
+  .history-hero-content h1 {
+    font-size: 55px;
+  }
+
+  .language-section {
+    padding: 45px 0;
+  }
+
+  .history-image {
+    height: 280px;
+  }
+
+  .language-btn {
+    padding: 10px 14px;
+  }
+}
